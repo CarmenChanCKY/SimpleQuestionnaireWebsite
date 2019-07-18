@@ -1,0 +1,103 @@
+.main_heading {
+	margin-top: 0px;
+	height: 150px;
+	width: 100%;
+	font-size: 30px;
+	background-image: url("/Questionnaire/bird.jpg");
+}
+.container {
+	width: 100%;
+	height: 1000px;
+}
+.navigation {
+	height: 700px;
+	width: 15%;
+	font-size: 25px;
+	float: left;
+}
+.content {
+	height: 700px;
+	width: 80%;
+	font-size: 20px;
+	float: right;
+	line-height:2.0;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #FCFAF2;
+}
+li a {
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+li a:hover:not(.active) {
+	background-color: #555;
+	color: white;
+}
+body {
+	background-color: #FCFAF2;
+	font-size: 20px;
+}
+
+.form {
+	font-size: 20px;
+}
+input[type=text], input[type=email] {
+	width: 400px;
+	padding: 12px 10px;
+	margin: 10px 0;
+	box-sizing: border-box;
+}
+textarea {
+	width: 500px;
+	padding: 12px 20px;
+	margin: 10px 0;
+	box-sizing: border-box;
+}
+textarea:focus, input[type=text]:focus, input[type=email]:focus{
+	border: 5px solid #7f7f7f;
+}
+input[type=submit], input[type=reset] {
+	background-color: #7BA23F;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	margin: 25px 10px;
+	cursor: pointer;
+}
+.radio {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+	padding-left: 30px;
+}
+.radio input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+.radiobutton {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	border-radius: 50%;
+}
+.radio input:checked ~ .radiobutton {
+	background-color: #7BA23F;
+}
+button {
+	background-color: #7BA23F;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	margin: 25px 10px;
+	cursor: pointer;
+}
