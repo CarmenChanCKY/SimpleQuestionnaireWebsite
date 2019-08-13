@@ -11,20 +11,14 @@ session_start();
 <body>
 <!--heading-->
 <div class="main_heading"> Questionnaire System
-  <p><font size=3>Welcome, <?php echo $_SESSION["info"][0];?>. </font></p>
+  <p><font size=3>Welcome, <?php echo $_SESSION["info"][0]; ?>. </font></p>
 </div>
 <!--container-->
-<div class="container"> 
+<div class="container">
   <!--navigation button-->
-  <div class="navigation">
-    <ul>
-      <li><a href="main.php">Home</a></li>
-      <li><a href="Survey.php">Answer the survey</a></li>
-      <li><a href="UserInfo.php">User information</a></li>
-      <li><a href="record.php">Record</a></li>
-      <li><a href="../../login.html">Logout</a></li>
-    </ul>
-  </div>
+  <?php
+include "../component/navigation.html"
+?>
   <!--content-->
   <div class="content">
     <p>

@@ -1,52 +1,54 @@
 <html>
+
 <head>
-<title>Questionnaire Website</title>
-<!--for css element-->
-<link rel="stylesheet" href="src/Questionnaire.css">
+  <title>Questionnaire Website</title>
+  <!--for css element-->
+  <link rel="stylesheet" href="src/Questionnaire.css">
 </head>
 
-<body background="pic/background.png">
+<body>
+<div>
+  <!--Header-->
+  <p>
+    <center>
+      <h1>Login</h1>
+    </center>
+  </p>
 
-<!--Header-->
-<p>
-<center>
-  <h1>Login</h1>
-</center>
-</p>
-
-<!--Login-->
-<form name="loginform" action="src/PHP/dataForLogin.php" method="POST">
-  <div id="login">
-    <label for="username">Username:</label>
-    <input type = "text" name = "username"/>
-    <br>
-    <label for="password">Password:</label>
-    <input type = "password" name = "password"/>
-    <br>
-    <div id="loginButton">
-      <input type="submit" value="Login" onClick="return checkLogin(this.form)"/>
-      <input type = "reset" value = "Reset"/>
-    </div>
+  <!--Login-->
+  <div id="login" align="center">
+    <form name="loginform" action="src/PHP/dataForLogin.php" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" name="username" />
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" name="password" />
+      <br>
+      <div id="loginButton">
+        <input type="submit" value="Login" onClick="return checkLogin(this.form)" />
+        <input type="reset" value="Reset" />
+      </div>
+    </form>
   </div>
-</form>
+</div>
+  <!--Validate user's input-->
+  <script language="javascript">
+    function checkLogin(form) {
+      if (form.username.value == "" || form.password.value == "") {
+        alert("Please input your username and password!");
+      }
+      else if ((form.username.value.trim() == "Amy_Chan" && form.password.value.trim() == "AmyChan123")
+        || (form.username.value.trim() == "Tom_Wong" && form.password.value.trim() == "TomWong456")) {
+        return true;
+      }
+      else {
+        alert("Please input a correct username and password!");
+      }
 
-<!--Validate user's input--> 
-<script language="javascript">
-         function checkLogin(form){
-			if(form.username.value == "" || form.password.value == ""){
-				alert("Please input your username and password!");
-			}
-			else if((form.username.value.trim() == "Amy_Chan" && form.password.value.trim() == "AmyChan123")
-				||(form.username.value.trim() == "Tom_Wong" && form.password.value.trim() == "TomWong456")){
-					return true;
-			}
-			else{
-				alert("Please input a correct username and password!");
-			}
-			
-			return false;
-			
-         }
-	  </script>
+      return false;
+
+    }
+  </script>
 </body>
+
 </html>

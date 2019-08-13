@@ -12,20 +12,14 @@ session_start();
 <body>
 <!--header-->
 <div class="main_heading"> Questionnaire System
-  <p><font size=3>Welcome, <?php echo $_SESSION["info"][0];?>. </font></p>
+  <p><font size=3>Welcome, <?php echo $_SESSION["info"][0]; ?>. </font></p>
 </div>
 <!--container-->
 <div class="container">
 <!--navigation menu-->
-<div class="navigation">
-  <ul>
-    <li><a href="main.php">Home</a></li>
-    <li><a href="survey.php">Answer the survey</a></li>
-    <li><a href="UserInfo.php">User information</a></li>
-    <li><a href="record.php">Record</a></li>
-    <li><a href="../../index.html">Logout</a></li>
-  </ul>
-</div>
+<?php
+include "../component/navigation.html"
+?>
 <!--content-->
 <div class="content">
   <center>
@@ -33,11 +27,11 @@ session_start();
   </center>
   <!--display content-->
   <?php
-	echo "Name: ".$_SESSION["info"][0]."<br>";
-	echo "Email address: ".$_SESSION["info"][1]."<br>";
-	echo "Phone number: ".$_SESSION["info"][2]."<br>";
-	echo "Home address: ".$_SESSION["info"][3]."<br>";
-	?>
+echo "Name: " . $_SESSION["info"][0] . "<br>";
+echo "Email address: " . $_SESSION["info"][1] . "<br>";
+echo "Phone number: " . $_SESSION["info"][2] . "<br>";
+echo "Home address: " . $_SESSION["info"][3] . "<br>";
+?>
     <!--update information-->
   <button type="button" onClick="go()">Update your Information</button>
 </div>
